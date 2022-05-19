@@ -17,11 +17,12 @@ const useToken = user => {
                 .then(data => {
                     console.log('data inside usetoken', data);
                     const accessToken = data.token;
+                    console.log(accessToken);
                     localStorage.setItem('accessToken', accessToken);
                     setToken(accessToken);
                 })
         }
-    }, [user])
+    }, [user]);
     return [token];
 }
 export default useToken;
